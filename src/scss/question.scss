@@ -1,0 +1,45 @@
+.question{
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    text-transform: uppercase;
+    text-align: center;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 1s ease;
+    p{
+        &:first-child{
+            position: relative;
+            color: white;
+            white-space: nowrap;
+            &::after{
+                content: 'Can you find';
+                position: absolute;
+                left: 3px;
+                top: 3px;
+                color: black;
+                z-index: -1;
+            }
+        }
+        &:last-child{
+            position: relative;
+            color: gold;
+            white-space: nowrap;
+            &::after{
+                content: '5 umbrellas';
+                position: absolute;
+                left: 4px;
+                top: 3px;
+                color: black;
+                z-index: -1;
+            }
+        }
+    }
+}
+
+.question-animation{
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+    top: 99%;
+}

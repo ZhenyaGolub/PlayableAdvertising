@@ -1,0 +1,14 @@
+.continue{
+    position: absolute;
+    z-index: 1;
+    display: none;
+    animation: continue 1s ease;
+    img{
+        width: 300px;
+    }
+}
+
+@keyframes continue {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}

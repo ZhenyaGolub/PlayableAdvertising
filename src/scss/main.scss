@@ -1,0 +1,19 @@
+@import 'fonts';
+@import 'advertising';
+@import 'score';
+@import 'question';
+@import 'umbrellas';
+@import 'continue';
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

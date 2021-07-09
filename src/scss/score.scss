@@ -1,0 +1,35 @@
+.score{
+    position: absolute;
+    transition: all 1s ease;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.score-numbers{
+    position: relative;
+}
+
+.result{
+    position: absolute;
+    z-index: 2;
+    white-space: nowrap;
+    top: -18px;
+    right: -61px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 26px;
+    color: #352b21;
+}
+
+.score img {
+    width: 160px;
+}
+
+.score-animation{
+    top: 8%;
+    transform: scale(0.8);
+}
+
+.score-animation-end{
+    opacity: 0;
+}

@@ -1,0 +1,64 @@
+.umbrella{
+    position: absolute;
+    transition: all 1s ease;
+}
+
+.umbrella1{
+    right: -3px;
+    top: 194px;
+}
+
+.umbrella1 {
+    img{
+        width: 48px;
+    }
+}
+
+.umbrella2{
+    left: 110px;
+    top: 295px;
+}
+
+.umbrella2{
+    img{
+        width: 58px;
+    }
+}
+
+.umbrella3{
+    left: -4px;
+    top: 204px;
+    transform: rotate(270deg);
+}
+
+.umbrella3{
+    img{
+        width: 100px;
+    }
+}
+
+.umbrella4{
+    right: 78px;
+    top: 261px;
+}
+
+.umbrella4{
+    img{
+        width: 69px;
+    }
+}
+
+.umbrella5{
+    right: 144px;
+    bottom: -5px;
+}
+
+.umbrella5{
+    img{
+        width: 95px;
+    }
+}
+
+.umbrella-animation{
+    opacity: 0;
+}
