@@ -63,6 +63,7 @@ const build = () => {
         'src/css/style.min.css',
         'src/js/main.min.js',
         'src/images/**/*',
+        'src/audio/**/*',
         'src/fonts/**/*',
         ], { base: 'src' })
         .pipe(dest('dist'))
