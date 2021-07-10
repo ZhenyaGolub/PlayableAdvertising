@@ -6,6 +6,7 @@
     position: absolute;
     top: 67%;
     left: 50%;
+    user-select: none;
     transform: translate(-50%, -50%);
     transition: all 1s ease;
     p{

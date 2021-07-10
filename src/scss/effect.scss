@@ -1,0 +1,9 @@
+.effect{
+    position: absolute;
+    z-index: 1;
+    transition: opacity 1.5s ease;
+}
+
+.effect-animation{
+    opacity: 0;
+}

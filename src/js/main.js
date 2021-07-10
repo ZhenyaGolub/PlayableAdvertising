@@ -1,9 +1,11 @@
 const $score = document.querySelector('#score');
 const $question = document.querySelector('#question');
+const $advertising = document.querySelector('#advertising');
 const $background = document.querySelector('#background');
 const $result = document.querySelector('#result');
 const $umbrellas = document.querySelectorAll('#umbrella');
 const $continue = document.querySelector('#continue');
+const audio = new Audio('../audio/click.mp3');
 
 class Score {
     constructor(){
@@ -42,7 +44,53 @@ const startAnimation = () => {
     }, 1000)
 }
 
+const calculateDifference = (width) => {
+    const effectwidth = Number(width.slice(0, width.length - 2));
+    const difference = effectwidth / 2;
+    return difference;
+}
+
+const effect = (left, top) => {
+    const $effect = document.createElement('div');
+    const $img = document.createElement('img');
+    $effect.classList.add('effect');
+    setTimeout(() => {
+        $effect.classList.add('effect-animation');
+    }, 0);
+    $img.setAttribute('src', './images/effect.gif');
+    $img.setAttribute('alt', 'effect');
+    $img.style.width = 170 + 'px';
+    $effect.append($img);
+    $effect.style.left = left - calculateDifference($img.style.width) + 'px';
+    $effect.style.top = top - calculateDifference($img.style.width) + 'px';
+    $effect.addEventListener('transitionend', () => {
+        $effect.style.display = 'none';
+    })
+    return $effect;
+}
+
+const scoreEffect = () => {
+    const $scoreEffect = document.createElement('div');
+    $scoreEffect.classList.add('score-effect');
+    const $img = document.createElement('img');
+    $img.setAttribute('src', './images/score-effect.gif');
+    $img.setAttribute('alt', 'score-effect');
+    $scoreEffect.append($img);
+    $scoreEffect.addEventListener('transitionend', () => {
+        $scoreEffect.style.display = 'none';
+    });
+    setTimeout(() => {
+        $scoreEffect.classList.add('score-effect-animation');
+    }, 0)
+    return $scoreEffect;
+}
+
 const find = (e) =>{
+    const differenceX = Math.round(e.clientX - $background.getBoundingClientRect().x);
+    const differenceY = Math.round(e.clientY - $background.getBoundingClientRect().y);
+    $background.append(effect(differenceX, differenceY));
+    $advertising.append(scoreEffect());
+    audio.play()
     const $umbrella = e.target;
     if(!$umbrella.classList.contains('umbella')){
         score.find();

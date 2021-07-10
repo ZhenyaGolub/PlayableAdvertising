@@ -4,6 +4,7 @@
     top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
+    user-select: none;
 }
 
 .score-numbers{
@@ -23,6 +24,21 @@
 
 .score img {
     width: 160px;
+}
+
+.score-effect{
+    z-index: 1;
+    position: absolute;
+    top: 8px;
+    left: 99px;
+    transition: opacity 2s ease;
+    img{
+        width: 100px;
+    }
+}
+
+.score-effect-animation{
+    opacity: 0;
 }
 
 .score-animation{
